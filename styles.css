@@ -1,0 +1,122 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: url(img/girasol.jpg);
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #e0e0e0; /* Color de texto claro */
+}
+
+h1 {
+    color: #b71c1c; /* Vino */
+    margin-bottom: 20px;
+}
+
+/* Estilos para el modal */
+.modal {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo negro */
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+}
+
+.modal-content {
+    background-color: rgba(0, 0, 0, 0.5); /* Gris */
+    border-radius: 25px;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 80%;
+}
+
+.modal-content p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #e0e0e0; /* Color de texto claro */
+}
+
+.cat{
+    width: 250px;
+}
+#audio-container {
+    margin-top: 15px;
+}
+
+audio {
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+/* Carrusel */
+.botoncito {
+    background: rgb(241, 4, 4);
+    color: white;
+    font-weight: bold;
+    border: none;
+    height: 40px;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+.carousel {
+    position: relative;
+    max-width: 600px; /* Ancho máximo del carrusel */
+    margin: 20px auto; /* Centrar el carrusel */
+    overflow: hidden;
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-item {
+    min-width: 100%; /* Cada imagen ocupa todo el carrusel */
+    position: relative; /* Para el overlay */
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto; /* Mantiene la relación de aspecto */
+}
+
+/* Overlay para el reproductor de audio */
+.audio-overlay {
+    position: absolute;
+    bottom: 10px; /* Ajusta la posición vertical */
+    left: 10px; /* Ajusta la posición horizontal */
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente */
+    border-radius: 10px;
+    padding: 10px;
+    width: calc(96% - 20px); /* Ajusta el ancho */
+}
+
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}

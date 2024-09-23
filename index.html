@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Girasol</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <p>Ahora no tengo nada que ofrecerte, pero te regalo un pedacito de lo que más valoro: 
+                mi conocimiento y mi amor por ti. ¡Feliz aniversario, amorcito! Espero que disfrutes 
+                esta sorpresa. Somos muy distintos, pero eso nos hace diferentes al resto. Me siento 
+                bien estando contigo. Aprende a confiar en mí como yo en ti. Si alguna vez te sentiste 
+                mal por mi culpa, hoy te pido disculpas una vez más. Nunca fue mi intención. Pasamos por 
+                tanto y estamos creando nuestra propia historia. Gracias por todo, perdón por tan poco. <br>¡TE QUIERO MUCHO, TI VOGLIO, I LOVE YOU!</p>
+
+            <!-- Reproductor de audio -->
+            <div id="audio-container">
+              <img class="cat" src="img/cat.jpg" alt="">
+                
+            </div>
+
+            <button class="botoncito" id="close-modal">EXPLORA</button>
+        </div>
+    </div>
+
+    <!-- Carrusel de Fotos -->
+    <div id="carousel" class="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-audio="audio/weare.mp3">
+                <img src="img/1.jpeg" alt="Foto 1">
+                <div class="audio-overlay">
+                    <audio controls>
+                        <source src="audio/weare.mp3" type="audio/mpeg">
+                        Tu navegador no soporta el reproductor de audio.
+                    </audio>
+                </div>
+            </div>
+            <div class="carousel-item" data-audio="audio/taburete.mp3">
+                <img src="img/2.jpg" alt="Foto 2">
+                <div class="audio-overlay">
+                    <audio controls>
+                        <source src="audio/taburete.mp3" type="audio/mpeg">
+                        Tu navegador no soporta el reproductor de audio.
+                    </audio>
+                </div>
+            </div>
+            <div class="carousel-item" data-audio="audio/sara.mp3">
+                <img src="img/3.jpg" alt="Foto 3">
+                <div class="audio-overlay">
+                    <audio controls>
+                        <source src="audio/sara.mp3" type="audio/mpeg">
+                        Tu navegador no soporta el reproductor de audio.
+                    </audio>
+                </div>
+            </div>
+            <div class="carousel-item" data-audio="audio/quando.mp3">
+                <img src="img/4.jpg" alt="Foto 4">
+                <div class="audio-overlay">
+                    <audio controls>
+                        <source src="audio/quando.mp3" type="audio/mpeg">
+                        Tu navegador no soporta el reproductor de audio.
+                    </audio>
+                </div>
+            </div>
+            <div class="carousel-item" data-audio="audio/airbag.mp3">
+                <img src="img/5.jpg" alt="Foto 5">
+                <div class="audio-overlay">
+                    <audio controls>
+                        <source src="audio/airbag.mp3" type="audio/mpeg">
+                        Tu navegador no soporta el reproductor de audio.
+                    </audio>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control prev" onclick="prevSlide()">❮</button>
+        <button class="carousel-control next" onclick="nextSlide()">❯</button>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Mostrar el modal al cargar la página
+        window.onload = function() {
+            document.getElementById('modal').style.display = 'flex';
+        }
+
+        // Cerrar el modal
+        document.getElementById('close-modal').onclick = function() {
+            document.getElementById('modal').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
